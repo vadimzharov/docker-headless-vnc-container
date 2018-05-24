@@ -7,7 +7,7 @@ RUN yum install -y ${PACKAGES} \
     && yum clean all
 
 ## Run custom commands
-RUN eval "${COMMAND}"
+RUN set -x; eval "${COMMAND}"
 
 ## switch back to default user
 USER 1000
