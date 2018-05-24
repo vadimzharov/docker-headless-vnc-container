@@ -7,7 +7,7 @@ RUN yum install -y ${PACKAGES} \
     && yum clean all
 
 ## Run custom commands
-RUN /bin/bash ${COMMAND}
+RUN ${COMMAND}
 
 ## switch back to default user
 USER 1000
