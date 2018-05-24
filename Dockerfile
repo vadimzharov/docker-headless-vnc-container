@@ -5,5 +5,9 @@ ENV REFRESHED_AT 2018-05-24
 USER 0
 RUN yum install -y ${PACKAGES} \
     && yum clean all
+
+## Run custom commands
+RUN /bin/bash ${COMMAND}
+
 ## switch back to default user
 USER 1000
